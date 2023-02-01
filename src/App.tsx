@@ -1,5 +1,6 @@
 import React from 'react';
+import LoanApp from './components/LoanApp/LoanApp';
 
 export function App(): JSX.Element {
-  return <div data-testid="greetings-container">Welcome to the Assignment</div>;
+  return <LoanApp />;
 }
