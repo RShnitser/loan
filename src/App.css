@@ -1,0 +1,23 @@
+:root {
+  --bg-gray: #f4f8fa;
+  --font-gray: #708697;
+  --border-gray: #ebf0f3;
+  --currency-gray: #cbd5dc;
+  --blue: #0079ff;
+  --blue-dark: #1b31a7;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-gray);
+}
+
+img {
+    width: 100%;
+}

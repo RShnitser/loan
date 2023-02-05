@@ -1,0 +1,55 @@
+/* .page-container {
+    
+} */
+
+.nav-container {
+    background-color: white;
+    padding: 30px 20px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+.title {
+    color: var(--blue-dark);
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 40px 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.card-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0.5, 0.5, 0.5, 0.15);
+}
+
+.goal-container {
+    display: flex;
+    align-items: center;
+}
+
+.goal-text {
+    padding: 5px 15px;
+}
+
+.goal-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.goal-subtitle {
+    color: var(--font-gray);
+}
+
+.loan-image {
+    max-width: 100px;
+}
