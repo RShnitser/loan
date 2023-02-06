@@ -5,7 +5,7 @@ import './LoanApp.css';
 // eslint-disable-next-line @typescript-eslint/naming-convention
 const LoanApp = (): JSX.Element => {
   const [amount, setAmount] = useState(0);
-  const [reachDate, setReachDate] = useState(0);
+  const [reachDate, setReachDate] = useState(1);
 
   const usdFormatter = new Intl.NumberFormat('en-us', {
     style: 'decimal',
@@ -81,7 +81,7 @@ const LoanApp = (): JSX.Element => {
                   type="button"
                   value="&lsaquo;"
                   onClick={() => {
-                    const newMonth = reachDate - 1 < 0 ? 0 : reachDate - 1;
+                    const newMonth = reachDate - 1 < 1 ? 1 : reachDate - 1;
                     setReachDate(newMonth);
                   }}
                 />
@@ -102,12 +102,14 @@ const LoanApp = (): JSX.Element => {
           <div className="border amount-container">
             <div className="monthly-label">
               <div>Monthly amount</div>
-              <div className="amount">${Math.ceil(amount / reachDate)}</div>
+              <div className="amount">
+                ${usdFormatter.format(Math.ceil(amount / reachDate))}
+              </div>
             </div>
             <div className="center-text planning">
               You&apos;re planning <span>{reachDate} monthly deposits</span> to
-              reach your <span>${usdFormatter.format(amount / 100)}</span> goal
-              by <span>{`${targetMonth} ${targetYear}`}</span>.
+              reach your <span>${usdFormatter.format(amount)}</span> goal by by
+              <span>{` ${targetMonth} ${targetYear}`}</span>.
             </div>
           </div>
           <button className="btn-confirm" type="submit">
